@@ -1,0 +1,482 @@
+/*----------------INÍCIO GERAL------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+/*-----------INÍCIO CORES----------*/
+
+:root {
+    /* ------COLORS NAV LIST-------*/
+    --color-header-principal: #e6f0fa;
+    --cor-decoration-text: #ffffff;
+    --color-text-nav: #000;
+    --color-list-hover: rgb(181, 181, 181);
+
+
+ 
+    /*----- CORES SECTION PRINCIPAL -----*/
+
+    --color-text-sec-principal: #000;
+
+   /* ------ CORES SECTION  ------*/
+    --color-titles-sections: #194569;
+
+    /*-------- CORES REPONSIVO --------*/
+    --color-responsivo: #ffffff;
+
+
+    
+
+}
+
+/*----------- FIM CORES ----------*/
+
+/*INICIO BODY*/
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+a, 
+.btn {
+    transition: all 300ms ease;
+
+/*FIM BODY*/
+}
+
+/*-----------FIM GERAL--------------------*/
+
+/*--------INICIO HEADER*-----------*/
+
+header {
+    background: var(--color-header-principal);
+}
+    
+
+
+header, .ListaNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+    
+}
+
+.ListaNav {
+    gap: 1rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+ 
+a, .ListaNav {
+
+    color: var(--color-text-nav);
+    text-decoration: none;
+    text-decoration-color: var(--cor-decoration-text);
+}
+/*-------- EEITO COM HOVER ---------*/
+li:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+
+.logo img {
+    height: 100%;       
+    max-height: 17vh;   /* PARA QUE NÃO ULTRAPASSE A ALTURA DO HEADER */
+    width: auto; 
+}
+
+   
+  /*------ MUDANÇA DE ESCALA LOGO -------*/
+.logo {
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+/*--------- RESPONSIVIDADE HEADER --------*/
+@media (max-width: 800px){
+    header{
+        background-color: var(--color-header-responsivo);
+    
+    }
+}
+
+
+@media (max-width: 640px) {
+header, .ListaNav {
+    flex-direction: column;
+    gap: 5px;
+
+ }
+}
+
+@media (max-width: 640px){
+    .logo {
+        display: none;
+    }
+}  
+/*----------FIM HEADER*------------*/
+
+
+/*------ INÍCIO PRINCIPAL ------*/
+
+section {
+    box-sizing: border-box;
+    min-height: fit-content;
+    
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 8%;
+    
+}
+
+
+/*------ AVATAR PRINCIPAL ------*/
+.sectionImgContainer img {
+    width: 400px; 
+    height: auto;
+    margin: auto 0;
+    
+
+}
+
+
+.section_text {
+    text-align: center;
+   
+
+}
+
+.TextoPrincipalOla {
+    font-size: 1.5rem;
+    color: #11608d;
+    position: relative;
+    top: 5px
+    
+    
+}
+
+
+ h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    color: var(--color-text-sec-principal);
+}
+
+.TextoPrincipalExp{
+    font-size: 1.3rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -12px;
+    color: var(--color-text-sec-principal);
+
+}
+
+.TextoPrincipalDescrubra {
+    text-align: center;
+    margin-top: 10px;
+    color: var(--color-text-sec-principal);
+    
+}
+
+/*Responsividade*/
+
+@media (max-width: 640px){
+    .imgPrincipal {
+     width: 180px;
+     max-width: 250px;
+     height: auto;
+     
+    
+    
+     
+    }
+    
+}
+
+@media (max-width: 640px){
+    #profile{
+        margin: 25%;
+        
+    }
+}
+
+@media (max-width: 640px){
+    #profile {
+        flex-wrap: wrap;
+       
+
+    }
+}
+    
+
+    
+ /*------- SETA BAIXO PRINCIPAL -------*/
+ .SetaBaixo{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    top: 30px;
+ }
+
+/*------- INÍCIO SOBRE MIM -----------*/
+
+.SectionSobre {
+    margin: 10%;
+   
+}
+
+.TituloIntroSobre {
+    color: var(--color-titles-sections);
+    font-size: 3rem;
+    text-align: center;
+    height: 60px;
+
+}
+
+
+.AvatarSobre {
+    width: 450px;
+    height: 450px;
+    
+
+}
+
+/*------ RESPONSIVIDADE IMG SOBRE ------*/
+@media (max-width: 640px){
+    .AvatarSobre{
+        width: 300px;
+        height: auto;
+    }
+}
+
+.SobreMinhaIntro{
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+    margin: auto;
+}
+
+.Linha {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    gap: 50px;
+    justify-content: space-around;
+    
+    
+}
+
+
+
+.Coluna {
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    
+    
+    
+}
+
+.SobreIntro {
+    color: #194569;
+    font-size: 1.3rem;
+}
+
+/*------- FIM SOBRE MIM -----------*/
+
+/*------------- INÍCIO EXPÊRIENCIA ------------*/
+
+.Expe {
+    margin: 8%;
+
+}
+
+.SectionExperiencia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+    
+    
+
+}
+/*------ Aplicando box-shadow -----*/
+.ContainerDev, .ContainerAnalista {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 1rem;
+  background: #000;
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+
+.ContainerAnalista h2, h3{
+    color: #ffff;
+}
+
+.ContainerDev h2, h3{
+    color: #ffff;
+}
+
+.ContainerAnalista p {
+    color: #ffb74d;
+    margin-bottom: 7px;
+}
+
+.ContainerDev p {
+    color: #ffb74d;
+}
+
+.TituloIntroExpe {
+    text-align: center;
+    font-size: 2.5rem;
+    position: relative;
+    bottom: 20px;
+    color: var(--color-titles-sections);
+}
+
+.TituloEx, h2 {
+    font-size: 1.8rem;
+}
+
+.imgAnalistaSuporte, .ImgFrontend {
+    width: 100%;
+    height: auto;
+
+}
+
+  .TituloEx, h2 {
+    font-size: 1.5rem;
+  }
+
+
+/*------------- FIM EXPÊRIENCIA -----------*/
+
+/*------ INICÍO PROJETOS -----*/
+
+.SectionProjetos {
+    margin: 8%;
+}
+
+.TextoTitleProjetos {
+    font-size: 3rem;
+    color: var(--color-titles-sections);
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+}
+
+.ContainerProjetos img{
+    width: 300px;
+    height: auto;
+}
+
+.ContainerProjetos {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 13rem;
+    flex-wrap: wrap;
+}
+
+/*------- RESPONSIVIDADE ------ */
+
+@media (max-width: 1024px){
+    .ContainerProjetos {
+        gap: 3rem;
+    }
+}
+
+
+.ProjetosDev,
+.ProjetosAnalista {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.ProjetoCar {
+    background: #FFB74D;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 16px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.SectionProjetos, p {
+    font-size: 1.2rem;
+}
+
+/*------ FIM PROJETOS -----*/
+
+/*------- *INICÍO RODAPÉ ------*/
+
+footer {
+    padding: 1%;
+    align-items: center;
+    background: #9baab9;
+    
+}
+
+
+.FooterBloco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .LogoJPF-Footer {
+    width: 250px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}   
+
+.FooterIcons {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+}
+
+.FooterIcons img{
+    width: 40px;
+}
+
+.FooterIcons img {
+    transition: transform 0.3s ease-in-out;
+}
+  
+  .FooterIcons img:hover {
+    transform: scale(1.2);
+}
+
+
+/*------- *FIM RODAPÉ ------*/
+
+
